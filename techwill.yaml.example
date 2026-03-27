@@ -1,0 +1,21 @@
+github:
+  token: ${GITHUB_TOKEN}
+llm:
+  base_url: ${LLM_BASE_URL}
+  api_key: ${LLM_API_KEY}
+  model: ${LLM_MODEL}
+output:
+  dir: ./wills
+  format: markdown
+extraction:
+  max_commits: 1000
+  warning_keywords:
+    - "temporary fix"
+    - "hack"
+    - "revisit"
+    - "fragile"
+    - "don't touch"
+    - "be careful"
+    - "workaround"
+    - "not sure"
+

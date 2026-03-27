@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tech-will"
+version = "0.1.0"
+description = "Reconstruct a developer's implicit technical intent from contribution history."
+requires-python = ">=3.11"
+dependencies = [
+  "gitpython",
+  "PyGithub",
+  "PyYAML",
+  "typer",
+]
+
+[project.scripts]
+tech-will = "techwill.cli:app"
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
